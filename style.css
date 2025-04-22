@@ -810,7 +810,7 @@ span{
 
 @media (max-width: 480px) {
     #darkMode-icon {
-        right: 5rem; /* Reduce the gap on smaller phones */
+        right: 7 rem; /* Reduce the gap on smaller phones */
     }
 }
 
