@@ -808,6 +808,17 @@ span{
     }
 }
 
+@media (max-width: 480px) {
+    #darkMode-icon {
+        right: 5rem; /* Reduce the gap on smaller phones */
+    }
+}
+
+@media (max-width: 375px) {
+    #darkMode-icon {
+        right: 4.5rem; /* Further adjustment for iPhone sizes */
+    }
+}
 @media(max-width: 320px){
     html{
         font-size: 50%;
