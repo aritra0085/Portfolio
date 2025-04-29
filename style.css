@@ -782,7 +782,13 @@ span{
     .about-img img {
         display: none;
     }
-
+    .portfolio-layer {
+        padding: 0 2rem;
+    }
+    
+    .portfolio-layer p {
+        max-width: 95%;
+    }
     .services h2,
     .portfolio h2{
         margin-bottom: 3rem;
@@ -812,6 +818,13 @@ span{
 @media (max-width: 480px) {
     #darkMode-icon {
         right: 7 rem; /* Reduce the gap on smaller phones */
+    }
+    .portfolio-layer h4 {
+        margin-bottom: 0.3rem;
+    }
+    
+    .portfolio-layer p {
+        margin: 0.2rem 0 1rem;
     }
 }
 
