@@ -228,14 +228,14 @@ section{
 
   .home .profession-container .profession-box{
     position: absolute;
-    top: -138px;
-    right: -80px;
+    top: -40px;
+    right: 0;
     width: 950px;
     height: 950px;
     /* background: purple; */
     border-radius: 50%;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     animation:  professionRotate 13s ease-out infinite;
 }
