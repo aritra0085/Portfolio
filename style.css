@@ -330,15 +330,23 @@ span{
 
 .about{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     gap: 4rem;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
     
 }
 
 .about-img img {
     width: 40vw;
 }
+
+.robot-3d{
+    position: absolute;
+    top: 850px;
+    right: -20%;
+} 
 
 .heading{
     font-size: 4.5rem;
@@ -354,9 +362,9 @@ span{
     font-size: 2rem;
 }
 
-.about-content p{
+.about-content p {
     font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    margin: 10px 0 10px 100px; /* top, right, bottom, left */
 }
 
 .services{
@@ -857,3 +865,5 @@ span{
         margin-top: 2rem;
     }
 }
+
+
