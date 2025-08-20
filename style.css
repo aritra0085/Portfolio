@@ -13,17 +13,17 @@
 }
 
 :root{
-    --bg-color: #fdfdfd;
-    --text-color: #333;
+    --bg-color: #0f043f;
+    --text-color: #fdfdfd;
     --main-color: #754ef9;
     --white-color: #fff;
-    --shadow-color: rgba(0,0,0, .2);
+    --shadow-color: rgba(0,0,0, .7);
 }
 
 .dark-mode{
-    --bg-color: #0b061f;
-    --text-color: #fdfdfd;
-    --shadow-color: rgba(0,0,0, .7);
+    --bg-color: #fdfdfd;
+    --text-color: #333;
+    --shadow-color: rgba(0,0,0, .2);
 }
 
 html{
@@ -215,30 +215,7 @@ section{
     border-color: var(--main-color);
 }
 
-.home .profession-container{
-    position: absolute; 
-    top: 0;
-    right: 0;
-    width: 950px; 
-    height: 950px; 
-    
-    /* background-color: red;  */
-    z-index: 1; 
-  }
 
-  .home .profession-container .profession-box{
-    position: absolute;
-    top: -40px;
-    right: 0;
-    width: 950px;
-    height: 950px;
-    /* background: purple; */
-    border-radius: 50%;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    animation:  professionRotate 13s ease-out infinite;
-}
 
 @keyframes professionRotate{
     0%,20%{
@@ -322,7 +299,7 @@ section{
     pointer-events: none;
     z-index: 1;
 }
-/* //////////////////////////////////////////////////////////////////////////////////????? */
+/* //////////////////////////////////////////////////////////////////////////////// */
 
 span{
     color: var(--main-color);
@@ -866,4 +843,263 @@ span{
     }
 }
 
+/* /////////////////////////////////////////// */
 
+.certificate-section {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+}
+
+.certificate-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.certificate-wrapper {
+    display: flex;
+    width: 800%; /* 8 items × 100% each */
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.certificate-item {
+    flex: 0 0 12.5%; /* 100% / 8 items = 12.5% */
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.certificate-item:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.3) 0%, rgba(37, 99, 235, 0.2) 100%);
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+    z-index: 10;
+}
+
+.certificate-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.certificate-item:hover .certificate-image img {
+    transform: scale(1.1);
+}
+
+.certificate-placeholder {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    user-select: none;
+}
+
+.certificate-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.certificate-item:hover .certificate-info {
+    transform: translateY(0);
+}
+
+.certificate-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.certificate-info p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+.scroll-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator.active {
+    background: #60a5fa;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.5);
+}
+
+.indicator:hover {
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+/* Tooltip styles */
+.certificate-tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 250px;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: tooltipFadeIn 0.3s ease;
+    pointer-events: none;
+}
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+.certificate-tooltip h4 {
+    margin: 0 0 8px 0;
+    color: #60a5fa;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.certificate-tooltip p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+/* Custom scrollbar */
+.certificate-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.certificate-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.certificate-container::-webkit-scrollbar-thumb {
+    background: rgba(96, 165, 250, 0.6);
+    border-radius: 4px;
+}
+
+.certificate-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(96, 165, 250, 0.8);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .certificate-container {
+        height: 300px;
+    }
+    
+    .certificate-placeholder {
+        font-size: 2rem;
+    }
+    
+    .certificate-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .certificate-info p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-section {
+        padding: 20px 10px;
+    }
+    
+    .certificate-container {
+        height: 250px;
+        border-radius: 15px;
+    }
+    
+    .certificate-placeholder {
+        font-size: 1.5rem;
+    }
+    
+    .certificate-info {
+        padding: 15px;
+    }
+    
+    .certificate-info h3 {
+        font-size: 1rem;
+    }
+    
+    .certificate-info p {
+        font-size: 0.7rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+}
