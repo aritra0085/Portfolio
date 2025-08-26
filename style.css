@@ -75,7 +75,7 @@ body{
 }
 
 .navbar a:hover {
-    color: var(--main-color);
+    color: var(#2a0bdb);
 }
 
 .header.sticky .navbar a{
